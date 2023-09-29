@@ -1,0 +1,104 @@
+body {
+  background-color: #5585b5;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#container {
+  width: 30rem;
+  height: 19rem;
+  max-width: 558px;
+  background-color: #233142;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.calculator {
+  text-align: center;
+}
+
+#display {
+  width: 100%;
+  padding: 4px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+button {
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.clear-button {
+  background-color: #ff5733; /* Adicione uma cor vermelha ao botão de limpar */
+  color: #fff; /* Define a cor do texto como branco */
+}
+
+.button-7 {
+  color: #fff;
+}
+.button-8 {
+  color: #fff;
+}
+.button-9 {
+  color: #fff;
+}
+.button-6 {
+  color: #fff;
+}
+.button-5 {
+  color: #fff;
+}
+.button-4 {
+  color: #fff;
+}
+.button-3 {
+  color: #fff;
+}
+.button-2 {
+color: #fff;
+}
+.button-1 {
+color: #fff;
+}
+.button-0 {
+color: #fff;
+}
+.button-mult {
+color: #fff;
+}
+.button-igual {
+  color: #fff;
+}
+.button-pont {
+  color: #fff;
+}
+.button-div {
+  color: #fff;
+}
+.button-mais {
+  color: #fff;
+}
+.button-menos {
+  color: #fff;
+}

@@ -13,9 +13,14 @@ body {
   height: 19rem;
   max-width: 558px;
   background-color: #233142;
-  border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 4;
+  max-width: 350px;
+  text-align: center;
+  background: rgba(0,0,0,.6);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(4px);
+  box-shadow: 0px 15px 30px rgba(0,0,0,.75);
 }
 
 .calculator {
@@ -23,10 +28,13 @@ body {
 }
 
 #display {
-  width: 100%;
+  width: 97%;
   padding: 4px;
   font-size: 24px;
   margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #e7eaf6;
+  border: 1px solid #a2a8d3;
 }
 
 .keys {
@@ -54,51 +62,27 @@ button:hover {
   color: #fff; /* Define a cor do texto como branco */
 }
 
-.button-7 {
+/* Defina uma classe comum para todos os botões com cor de texto branca */
+.white-text-button {
   color: #fff;
 }
-.button-8 {
-  color: #fff;
-}
-.button-9 {
-  color: #fff;
-}
-.button-6 {
-  color: #fff;
-}
-.button-5 {
-  color: #fff;
-}
-.button-4 {
-  color: #fff;
-}
-.button-3 {
-  color: #fff;
-}
-.button-2 {
-color: #fff;
-}
-.button-1 {
-color: #fff;
-}
-.button-0 {
-color: #fff;
-}
-.button-mult {
-color: #fff;
-}
-.button-igual {
-  color: #fff;
-}
-.button-pont {
-  color: #fff;
-}
-.button-div {
-  color: #fff;
-}
-.button-mais {
-  color: #fff;
-}
+
+.button-7,
+.button-8,
+.button-9,
+.button-6,
+.button-5,
+.button-4,
+.button-3,
+.button-2,
+.button-1,
+.button-0,
+.button-mult,
+.button-igual,
+.button-pont,
+.button-div,
+.button-mais,
 .button-menos {
+  /* Aplique a classe comum aqui */
   color: #fff;
 }

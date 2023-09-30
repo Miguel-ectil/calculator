@@ -1,11 +1,14 @@
 body {
   background-color: #5585b5;
   font-family: 'Inter', sans-serif;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 68vh;
   margin: 0;
+}
+#titulo {
+  text-align: center;
 }
 
 #container {
@@ -84,5 +87,52 @@ button:hover {
 .button-mais,
 .button-menos {
   /* Aplique a classe comum aqui */
-  color: #fff;
+  color: #ffffffc2;
 }
+
+
+.animated-title {
+  font-size: 40px;
+  color: #080808;
+  animation: slideIn 2s ease-in-out forwards; /* Aplicar animação 'slideIn' por 2 segundos */
+  opacity: 0; /* Comece com uma opacidade de 0 para esconder o título */
+  margin-top: 20px;
+  color: #ffffffc2;
+
+  background-color: #233142;
+  padding: 14px;
+  text-align: center;
+  background: rgba(0,0,0,.4);
+  border-radius: 2rem;
+  box-shadow: 0px 15px 30px rgba(0,0,0,.10);
+}
+
+@keyframes wormAnimation {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(50px) translateY(0);
+  }
+  50% {
+    transform: translateX(50px) translateY(50px);
+  }
+  75% {
+    transform: translateX(0) translateY(50px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%); /* Inicia da direita */
+    opacity: 0; /* Começa invisível */
+  }
+  100% {
+    transform: translateX(0); /* Termina na posição original */
+    opacity: 1; /* Torna-se visível */
+  }
+}
+  

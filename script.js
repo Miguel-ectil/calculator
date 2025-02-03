@@ -38,12 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
           display.value = "Erro";
         }
       } else if (value === "%") {
-        display.value = parseFloat(display.value) / 100 * parseFloat(display.value);
+        display.value = parseFloat(display.value) / 100;
       } else {
         display.value += value;
       }
     });
   });
 });
-
 

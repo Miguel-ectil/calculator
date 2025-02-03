@@ -19,14 +19,31 @@ function calculate() {
   }
 }
 
-document.addEventListener('keydown', function(event) {
-  const key = event.key;
-  if (/[\d+\-*/.=]/.test(key)) {
-    appendToDisplay(key);
-  } else if (key === 'Enter') {
-    calculate();
-  } else if (key === 'Escape') {
-    displayValue = '';
-    document.getElementById('display').value = displayValue;
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  const display = document.getElementById("display");
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const value = button.innerText;
+
+      if (value === "C") {
+        display.value = "";
+      } else if (value === "⌫") {
+        display.value = display.value.slice(0, -1); // Apagar último caractere
+      } else if (value === "=") {
+        try {
+          display.value = eval(display.value.replace("×", "*").replace("÷", "/"));
+        } catch {
+          display.value = "Erro";
+        }
+      } else if (value === "%") {
+        display.value = parseFloat(display.value) / 100 * parseFloat(display.value);
+      } else {
+        display.value += value;
+      }
+    });
+  });
 });
+
+

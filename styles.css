@@ -1,149 +1,134 @@
+/* Estilo do body para centralizar tudo */
 body {
   background-color: #5585b5;
   font-family: 'Inter', sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  padding: 0;
-  flex-direction: column;
 }
 
-/* Título animado e centralizado */
-.animated-title {
-  font-size: 2rem;
-  color: white;
+header {
   text-align: center;
-  animation: slideIn 1.5s ease-in-out forwards;
-  margin-bottom: 22px;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0px;
 }
 
-/* Container da calculadora */
+/* Container principal da calculadora */
 #container {
   width: 90%;
-  max-width: 360px;
-  background: rgba(0, 0, 0, 0.6);
+  max-width: 340px;
+  background: #303134;
   padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  backdrop-filter: blur(4px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Estilização do display */
+/* Estilo do display */
 #display {
   width: 100%;
-  max-width: 300px; /* Para evitar que ocupe toda a largura do card */
-  height: 30px; /* Ajustando altura para melhor proporção */
+  height: 36px;
   padding: 10px;
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: right;
-  border-radius: 8px;
-  background-color: #e7eaf6;
-  border: 2px solid #a2a8d3;
-  margin-bottom: 15px;
+  border-radius: 12px;
+  background-color: #3c4043;
+  border: none;
+  color: white;
+  outline: none;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-bottom: 15px;
 }
 
-/* Layout dos botões */
-.keys {
+/* Grid de botões */
+.calculator-keys {
+  display: flex;
+  width: 100%;
+}
+
+.number-keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  width: 100%;
-  max-width: 300px; /* Garantindo alinhamento dos botões com o input */
+  gap: 8px;
+  flex: 1;
 }
 
-/* Estilo dos botões */
+/* Estilização dos botões */
 button {
-  padding: 15px;
-  font-size: 1.2rem;
+  width: 100%;
+  height: 48px;
+  font-size: 1.5rem;
   border: none;
-  border-radius: 6px;
-  background: #444c5c;
+  border-radius: 10px;
+  background: #505357;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 button:hover {
-  background: #5a6274;
+  background: #686d71;
   transform: scale(1.05);
 }
 
-/* Botão de limpar com destaque */
-.clear-button {
-  background-color: #ff5733;
+/* Botão de operadores */
+.operator {
+  background: #4285f4;
 }
 
-.clear-button:hover {
-  background-color: #e04a2b;
+.operator:hover {
+  background: #3367d6;
 }
 
-/* Estilização especial para os botões de operação */
-.button-mult,
-.button-div,
-.button-mais,
-.button-menos,
-.button-igual {
-  background: #6c85a2;
+/* Botão de igual */
+.equal-button {
+  background: #f76e4b;
 }
 
-.button-mult:hover,
-.button-div:hover,
-.button-mais:hover,
-.button-menos:hover,
-.button-igual:hover {
-  background: #526a8a;
+.equal-button:hover {
+  background: #f76e4bd3;
+}
+
+.animated-title {
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Animação do título */
-@keyframes slideIn {
-  0% {
-    transform: translateY(-50px);
+@keyframes fadeIn {
+  from {
     opacity: 0;
+    transform: translateY(-20px);
   }
-  100% {
-    transform: translateY(0);
+  to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* Responsividade */
 @media (max-width: 400px) {
-  .animated-title {
-    font-size: 1.5rem;
-    padding: 8px;
-  }
-
   #container {
-    width: 95%;
     max-width: 300px;
     padding: 15px;
   }
 
   #display {
-    font-size: 1.5rem;
-    padding: 10px;
-    max-width: 280px;
-  }
-
-  .keys {
-    max-width: 280px;
+    font-size: 1.8rem;
+    height: 60px;
   }
 
   button {
-    padding: 12px;
-    font-size: 1rem;
+    height: 50px;
+    font-size: 1.2rem;
   }
 }

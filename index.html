@@ -1,42 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
   <title>Calculadora</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1 class="animated-title"><strong>Faça seu Calculo</strong></h1>
-  <div class="worm"></div>
-  <div id="container">
-    <div class="ball"></div>
-    <div class="ball"></div>
-    <div class="ball"></div>
-    <div class="calculator">
-      <input type="text" id="display" readonly>
-      <div class="keys">
-        <button class="clear-button" onclick="clearDisplay()">C</button>
-        <button class="button-7" onclick="appendToDisplay('7')">7</button>
-        <button class="button-8" onclick="appendToDisplay('8')">8</button>
-        <button class="button-9" onclick="appendToDisplay('9')">9</button>
-        <button class="button-4" onclick="appendToDisplay('4')">4</button>
-        <button class="button-5" onclick="appendToDisplay('5')">5</button>
-        <button class="button-6" onclick="appendToDisplay('6')">6</button>
-        <button class="button-1" onclick="appendToDisplay('1')">1</button>
-        <button class="button-2" onclick="appendToDisplay('2')">2</button>
-        <button class="button-3" onclick="appendToDisplay('3')">3</button>
-        <button class="button-0" onclick="appendToDisplay('0')">0</button>
-        <button class="button-mult" onclick="appendToDisplay('*')">*</button>
-        <button class="button-div" onclick="appendToDisplay('/')">/</button>
 
-        <button class="button-menos" onclick="appendToDisplay('-')">-</button>
-        <button class="button-pont" onclick="appendToDisplay('.')">.</button>
-        <button class="button-igual" onclick="calculate()">=</button>
-        <button class="button-mais" onclick="appendToDisplay('+')">+</button>
+  <!-- Título do Projeto -->
+  <header>
+    <h2 class="animated-title"><strong>Calculadora moderna</strong></h2>
+  </header>
+
+  <div id="container">
+    <input type="text" id="display" disabled />
+
+    <div class="calculator-keys">
+      <!-- Números e Funções -->
+      <div class="number-keys">
+        <button class="clear">C</button>
+        <button class="delete">⌫</button>
+        <button class="operator">%</button>
+        <button class="operator">÷</button>
+
+        <button class="num">7</button>
+        <button class="num">8</button>
+        <button class="num">9</button>
+        <button class="operator">×</button>
+
+        <button class="num">4</button>
+        <button class="num">5</button>
+        <button class="num">6</button>
+        <button class="operator">-</button>
+
+        <button class="num">1</button>
+        <button class="num">2</button>
+        <button class="num">3</button>
+        <button class="operator">+</button>
+
+        <button class="num">0</button>
+        <button class="num">.</button>
+        <button class="equal-button">=</button>
       </div>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>

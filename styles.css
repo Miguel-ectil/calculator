@@ -31,7 +31,7 @@ header {
 /* Estilo do display */
 #display {
   width: 100%;
-  height: 40px;
+  height: 36px;
   padding: 10px;
   font-size: 2rem;
   text-align: right;
@@ -62,7 +62,7 @@ header {
 /* Estilização dos botões */
 button {
   width: 100%;
-  height: 60px;
+  height: 48px;
   font-size: 1.5rem;
   border: none;
   border-radius: 10px;
@@ -77,24 +77,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Botão de limpar */
-.clear-button {
-  background-color: #ff6b6b;
-}
-
-.clear-button:hover {
-  background-color: #ff4747;
-}
-
-/* Botão de apagar um item */
-.delete-button {
-  background-color: #ffa500;
-}
-
-.delete-button:hover {
-  background-color: #ff8c00;
-}
-
 /* Botão de operadores */
 .operator {
   background: #4285f4;
@@ -106,11 +88,11 @@ button:hover {
 
 /* Botão de igual */
 .equal-button {
-  background: #34a853;
+  background: #f76e4b;
 }
 
 .equal-button:hover {
-  background: #2c8c42;
+  background: #f76e4bd3;
 }
 
 .animated-title {

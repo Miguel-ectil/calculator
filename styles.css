@@ -1,138 +1,149 @@
 body {
   background-color: #5585b5;
   font-family: 'Inter', sans-serif;
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 68vh;
+  height: 100vh;
   margin: 0;
-}
-#titulo {
-  text-align: center;
+  padding: 0;
+  flex-direction: column;
 }
 
+/* Título animado e centralizado */
+.animated-title {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  animation: slideIn 1.5s ease-in-out forwards;
+  margin-bottom: 22px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Container da calculadora */
 #container {
-  width: 30rem;
-  height: 19rem;
-  max-width: 558px;
-  background-color: #233142;
+  width: 90%;
+  max-width: 360px;
+  background: rgba(0, 0, 0, 0.6);
   padding: 20px;
-  margin: 4;
-  max-width: 350px;
   text-align: center;
-  background: rgba(0,0,0,.6);
-  border-radius: 0.5rem;
+  border-radius: 10px;
   backdrop-filter: blur(4px);
-  box-shadow: 0px 15px 30px rgba(0,0,0,.75);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.calculator {
-  text-align: center;
-}
-
+/* Estilização do display */
 #display {
-  width: 97%;
-  padding: 4px;
-  font-size: 24px;
-  margin-bottom: 10px;
-  border-radius: 6px;
+  width: 100%;
+  max-width: 300px; /* Para evitar que ocupe toda a largura do card */
+  height: 30px; /* Ajustando altura para melhor proporção */
+  padding: 10px;
+  font-size: 1.8rem;
+  text-align: right;
+  border-radius: 8px;
   background-color: #e7eaf6;
-  border: 1px solid #a2a8d3;
+  border: 2px solid #a2a8d3;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
+/* Layout dos botões */
 .keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px; /* Garantindo alinhamento dos botões com o input */
 }
 
+/* Estilo dos botões */
 button {
-  padding: 10px;
-  font-size: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: #444c5c;
+  color: white;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: rgba(0, 0, 0, 0.02);
+  background: #5a6274;
+  transform: scale(1.05);
 }
 
+/* Botão de limpar com destaque */
 .clear-button {
-  background-color: #ff5733; /* Adicione uma cor vermelha ao botão de limpar */
-  color: #fff; /* Define a cor do texto como branco */
+  background-color: #ff5733;
 }
 
-/* Defina uma classe comum para todos os botões com cor de texto branca */
-.white-text-button {
-  color: #fff;
+.clear-button:hover {
+  background-color: #e04a2b;
 }
 
-.button-7,
-.button-8,
-.button-9,
-.button-6,
-.button-5,
-.button-4,
-.button-3,
-.button-2,
-.button-1,
-.button-0,
+/* Estilização especial para os botões de operação */
 .button-mult,
-.button-igual,
-.button-pont,
 .button-div,
 .button-mais,
-.button-menos {
-  /* Aplique a classe comum aqui */
-  color: #ffffffc2;
+.button-menos,
+.button-igual {
+  background: #6c85a2;
 }
 
-
-.animated-title {
-  font-size: 40px;
-  color: #080808;
-  animation: slideIn 2s ease-in-out forwards; /* Aplicar animação 'slideIn' por 2 segundos */
-  opacity: 0; /* Comece com uma opacidade de 0 para esconder o título */
-  margin-top: 20px;
-  color: #ffffffc2;
-
-  background-color: #233142;
-  padding: 14px;
-  text-align: center;
-  background: rgba(0,0,0,.4);
-  border-radius: 2rem;
-  box-shadow: 0px 15px 30px rgba(0,0,0,.10);
+.button-mult:hover,
+.button-div:hover,
+.button-mais:hover,
+.button-menos:hover,
+.button-igual:hover {
+  background: #526a8a;
 }
 
-@keyframes wormAnimation {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  25% {
-    transform: translateX(50px) translateY(0);
-  }
-  50% {
-    transform: translateX(50px) translateY(50px);
-  }
-  75% {
-    transform: translateX(0) translateY(50px);
-  }
-  100% {
-    transform: translateX(0) translateY(0);
-  }
-}
-
+/* Animação do título */
 @keyframes slideIn {
   0% {
-    transform: translateX(100%); /* Inicia da direita */
-    opacity: 0; /* Começa invisível */
+    transform: translateY(-50px);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0); /* Termina na posição original */
-    opacity: 1; /* Torna-se visível */
+    transform: translateY(0);
+    opacity: 1;
   }
 }
-  
+
+/* Responsividade */
+@media (max-width: 400px) {
+  .animated-title {
+    font-size: 1.5rem;
+    padding: 8px;
+  }
+
+  #container {
+    width: 95%;
+    max-width: 300px;
+    padding: 15px;
+  }
+
+  #display {
+    font-size: 1.5rem;
+    padding: 10px;
+    max-width: 280px;
+  }
+
+  .keys {
+    max-width: 280px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

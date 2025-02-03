@@ -124,7 +124,8 @@ button:hover {
 
   #display {
     font-size: 1.8rem;
-    height: 22px;
+    width: 90%;
+    height: 34px;
   }
 
   button {

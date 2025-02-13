@@ -22,7 +22,7 @@ A calculadora permite realizar operações aritméticas básicas como adição, 
 
 Contribuições são bem-vindas! Se você deseja adicionar novos recursos ou melhorar o código, fique à vontade para abrir um pull request.
 
-## Licença
+## 📜 Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
